@@ -1,6 +1,7 @@
 {
   "docs": {
     "Overview": ["goals", "requirements"],
-    "User Stories": ["us-cohort"]
+    "User Stories": ["us-cohort"],
+    "GraphQL": ["graphql-type", "graphql-query", "graphql-mutation"]
   }
 }
