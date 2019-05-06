@@ -11,11 +11,11 @@ sidebar_label: Queries
 _patients: [Patient!]!_
 
 - Input: none
-- Output: 
+- Output: all patients and their associated events
 
 ### eventTree
 
 _eventTree: [EventTree!]!_
 
 - Input: none
-- Output: 
+- Output: all events types and their associated information
