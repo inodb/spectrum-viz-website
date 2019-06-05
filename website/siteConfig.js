@@ -38,7 +38,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: "goals", label: "Docs" },
+    { doc: "summary", label: "Docs" },
     {
       href: "https://github.com/shahcompbio/spectrum-viz-website",
       label: "GitHub"

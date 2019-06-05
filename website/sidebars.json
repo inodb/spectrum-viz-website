@@ -1,6 +1,10 @@
 {
   "docs": {
-    "Overview": ["goals", "requirements"],
-    "User Stories": ["us-cohort"]
+    "Overview": ["summary"],
+    "Alhena": ["alhena-overview"],
+    "Cassiopeia": ["cassiopeia-overview"],
+    "Hydra": ["hydra-overview"],
+    "Mira": ["mira-overview"],
+    "Sylph": ["sylph-overview"]
   }
 }
