@@ -4,7 +4,7 @@
     "Alhena": ["alhena-overview"],
     "Cassiopeia": ["cassiopeia-overview"],
     "Hydra": ["hydra-overview"],
-    "Mira": ["mira-overview"],
+    "Mira": ["mira-overview", "mira-deploy", "mira-loading-data"],
     "Sylph": ["sylph-overview", "sylph-deploy"]
   }
 }
