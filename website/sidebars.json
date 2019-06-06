@@ -1,10 +1,10 @@
 {
   "docs": {
-    "Overview": ["summary"],
+    "Overview": ["summary", "architecture"],
     "Alhena": ["alhena-overview"],
     "Cassiopeia": ["cassiopeia-overview"],
     "Hydra": ["hydra-overview"],
     "Mira": ["mira-overview"],
-    "Sylph": ["sylph-overview"]
+    "Sylph": ["sylph-overview", "sylph-deploy"]
   }
 }

@@ -1,7 +1,7 @@
 ---
-id: summary
-title: Summary
-sidebar_label: Summary
+id: architecture
+title: Architecture
+sidebar_label: System Architecture
 ---
 
 ## Production Architecture
@@ -17,3 +17,5 @@ sidebar_label: Summary
 5. **Mira** (scRNA) is hosted on an **Azure VM**. A **Docker Compose** instance runs within it. The main webserver redirects requests with `/scrna/` to the VM's IP address.
 
 ## Staging Architecture
+
+TBD
