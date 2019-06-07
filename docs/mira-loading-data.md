@@ -6,8 +6,6 @@ sidebar_label: Loading Data
 
 ## Overview
 
-Mira's input data comes from the [scRNA pipeline](https://github.com/shahcompbio/SCRNApipeline) as a collection of JSON files - one for each sample (for a given patient). You will also need a YAML file that describes the metadata.
-
 Using the loaders will populate Elasticsearch with:
 
 - Cell type, cluster, and tSNE dimension data for each cell
@@ -16,7 +14,13 @@ Using the loaders will populate Elasticsearch with:
 
 There are two ways to load data into Elasticsearch - using a virtual environment or running a pre-build Docker image.
 
-## Metadata YAML
+## Required files
+
+### JSON data files
+
+Mira's input data comes from the [scRNA pipeline](https://github.com/shahcompbio/SCRNApipeline) as a collection of JSON files - one for each sample. These JSON files are contained in a directory (one per patient).
+
+### Metadata YAML
 
 This should be in the same directory as the JSON files and should be named `patient_metadata.yaml`
 
