@@ -47,7 +47,7 @@ This method is recommended while doing development on the loaders.
 Clone Mira's database repository:
 
 ```
-git clone https://github.com/shahcompbio/spectrum-scrna-db
+git clone https://github.com/shahcompbio/mira-db
 ```
 
 Create and start a new python3 environment

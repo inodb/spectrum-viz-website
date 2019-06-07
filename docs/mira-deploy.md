@@ -4,14 +4,6 @@ title: Mira - Deployment
 sidebar_label: Deployment
 ---
 
-## Software Architecture
-
-Mira consists of three layers:
-
-- React front-end
-- GraphQL middleware
-- Elasticsearch database
-
 ## Deploy: Development
 
 ### System Requirements
@@ -36,13 +28,13 @@ To load data, follow [these instructions](mira-loading-data).
 Clone Mira's graphQL repository:
 
 ```
-git clone https://github.com/shahcompbio/spectrum-scrna-graphql
+git clone https://github.com/shahcompbio/mira-graphql
 ```
 
 Go into the directory and install the dependencies:
 
 ```
-cd spectrum-scrna-graphql
+cd mira-graphql
 yarn install
 ```
 
@@ -56,16 +48,16 @@ Following the URL `http://localhost:4000` should bring you to the GraphQL playgr
 
 ### React
 
-Clone [Mira's React](https://github.com/shahcompbio/spectrum-scrna-react) repository:
+Clone [Mira's React](https://github.com/shahcompbio/mira-react) repository:
 
 ```
-git clone https://github.com/shahcompbio/spectrum-scrna-react.git
+git clone https://github.com/shahcompbio/mira-react.git
 ```
 
 Go into the directory and install the dependencies:
 
 ```
-cd spectrum-scrna-react
+cd mira-react
 yarn install
 ```
 
@@ -93,7 +85,7 @@ TBD
 In the server where you want to host your production instance, clone Mira's Docker repository:
 
 ```
-git clone https://github.com/shahcompbio/spectrum-scrna-docker
+git clone https://github.com/shahcompbio/mira-docker
 ```
 
 Then run Docker Compose:
@@ -111,8 +103,8 @@ The instructions above shows how to deploy a production-level instance of Mira u
 To update an image, first set up as you would for development deployment (this is shown for the graphQL layer - the instructions are similar for the React layer):
 
 ```
-git clone https://github.com/shahcompbio/spectrum-scrna-graphql
-cd spectrum-scrna-graphql
+git clone https://github.com/shahcompbio/mira-graphql
+cd mira-graphql
 yarn install
 ```
 

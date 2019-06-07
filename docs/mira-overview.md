@@ -11,6 +11,14 @@ Mira is a single cell RNA (scRNA) dashboard for MSK SPECTRUM. It takes the JSON 
 - Allow users to browse through the processed data for QC / low level analysis purposes
 - Allow users to access the data for further analysis
 
+## Repositories
+
+- [React front-end](https://github.com/shahcompbio/mira-react)
+- [GraphQL middleware](https://github.com/shahcompbio/mira-graphql)
+- [Elasticsearch database](https://github.com/shahcompbio/mira-db)
+
+- [Docker Compose build](https://github.com/shahcompbio/mira-docker)
+
 ## Technology
 
 - [React](https://reactjs.org)
