@@ -5,6 +5,6 @@
     "Cassiopeia": ["cassiopeia-overview"],
     "Hydra": ["hydra-overview"],
     "Mira": ["mira-overview", "mira-deploy", "mira-loading-data"],
-    "Sylph": ["sylph-overview", "sylph-deploy"]
+    "Sylph": ["sylph-overview", "sylph-changelog", "sylph-deploy"]
   }
 }
