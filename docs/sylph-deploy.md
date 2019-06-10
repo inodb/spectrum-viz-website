@@ -19,16 +19,16 @@ Sylph consists of two layers:
 
 ### GraphQL + LokiJS
 
-Clone Sylph's graphQL repository:
+Clone [Sylph's graphQL](https://github.com/shahcompbio/sylph-graphql) repository:
 
 ```
-git clone https://github.com/shahcompbio/spectrum-cohort-graphql
+git clone https://github.com/shahcompbio/sylph-graphql
 ```
 
 Go into the directory and install the dependencies:
 
 ```
-cd spectrum-cohort-graphql
+cd sylph-graphql
 yarn install
 ```
 
@@ -42,16 +42,16 @@ Following the URL `http://localhost:4000` should bring you to the GraphQL playgr
 
 ### React
 
-Clone [Sylph's React](https://github.com/shahcompbio/spectrum-cohort-react) repository:
+Clone [Sylph's React](https://github.com/shahcompbio/sylph-react) repository:
 
 ```
-git clone https://github.com/shahcompbio/spectrum-cohort-react.git
+git clone https://github.com/shahcompbio/sylph-react.git
 ```
 
 Go into the directory and install the dependencies:
 
 ```
-cd spectrum-cohort-react
+cd sylph-react
 yarn install
 ```
 
@@ -79,7 +79,7 @@ TBD
 In the server where you want to host your production instance, clone Sylph's Docker repository:
 
 ```
-git clone https://github.com/shahcompbio/spectrum-cohort-docker
+git clone https://github.com/shahcompbio/sylph-docker
 ```
 
 Then run Docker Compose:
@@ -90,6 +90,20 @@ docker-compose up -d
 
 Note that this binds to `localhost:5001` on your local server. For MSK, our main webserver redirects `~/cohort/surgery/` to `localhost:5001`.
 
+### Alternative
+
+If you would prefer to run the images without Docker Compose, they can be run as separate containers:
+
+```
+docker pull shahcompbio/sylph-graphql
+
+docker pull shahcompbio/sylph-react
+
+docker run -d -p 4000:4000 --name graphql sylph-graphql
+
+docker run -d -p 80:80 --link graphql:graphql sylph-react
+```
+
 ### Deploying new version
 
 The instructions above shows how to deploy a production-level instance of Sylph using pre-built images hosted on Docker Hub. There are two images - one for each layer.
@@ -97,22 +111,22 @@ The instructions above shows how to deploy a production-level instance of Sylph 
 To update an image, first set up as you would for development deployment (this is shown for the graphQL layer - the instructions are similar for the React layer):
 
 ```
-git clone https://github.com/shahcompbio/spectrum-cohort-graphql
-cd spectrum-cohort-graphql
+git clone https://github.com/shahcompbio/sylph-graphql
+cd sylph-graphql
 yarn install
 ```
 
 Then run the Dockerfile to build a new image:
 
 ```
-docker build . -t spectrum-cohort-graphql
+docker build . -t sylph-graphql
 ```
 
 Then tag and push to Docker Hub
 
 ```
-docker tag spectrum-cohort-graphql shahcompbio/spectrum-cohort-graphql
-docker push shahcompbio/spectrum-cohort-graphql
+docker tag sylph-graphql shahcompbio/sylph-graphql
+docker push shahcompbio/sylph-graphql
 ```
 
 Once that's complete, go to where your production instance, then pull and restart your docker instance.
