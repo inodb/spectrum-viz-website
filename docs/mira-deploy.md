@@ -103,31 +103,43 @@ The instructions above shows how to deploy a production-level instance of Mira u
 To update an image, first set up as you would for development deployment (this is shown for the graphQL layer - the instructions are similar for the React layer):
 
 ```
+
 git clone https://github.com/shahcompbio/mira-graphql
+
 cd mira-graphql
+
 yarn install
+
 ```
 
 Then run the Dockerfile to build a new image:
 
 ```
-docker build . -t spectrum-scrna-graphql
+
+docker build . -t mira-graphql
+
 ```
 
 Then tag and push to Docker Hub
 
 ```
-docker tag spectrum-scrna-graphql shahcompbio/spectrum-scrna-graphql
-docker push shahcompbio/spectrum-scrna-graphql
+
+docker tag mira-graphql shahcompbio/mira-graphql
+
+docker push shahcompbio/mira-graphql
+
 ```
 
 Once that's complete, go to where your production instance, then pull and restart your docker instance.
 
 ```
+
 docker-compose pull
+
 docker-compose down
 
 docker-compose up -d
+
 ```
 
 ## Future Plans
@@ -136,3 +148,7 @@ docker-compose up -d
 - Provide example data for them to load
 - Automate deployment of staging / production (TravisCI?)
 - Automate rebuilding of images when pushed to repo (Docker Hub already seems to support this)
+
+```
+
+```
