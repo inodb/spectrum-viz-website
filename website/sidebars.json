@@ -3,8 +3,13 @@
     "Overview": ["summary", "architecture"],
     "Alhena": ["alhena-overview"],
     "Cassiopeia": ["cassiopeia-overview"],
-    "Hydra": ["hydra-overview"],
-    "Mira": ["mira-overview", "mira-deploy", "mira-loading-data"],
+    "Hydra": ["hydra-overview", "hydra-changelog"],
+    "Mira": [
+      "mira-overview",
+      "mira-changelog",
+      "mira-deploy",
+      "mira-loading-data"
+    ],
     "Sylph": ["sylph-overview", "sylph-changelog", "sylph-deploy"]
   }
 }
