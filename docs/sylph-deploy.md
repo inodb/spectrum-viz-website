@@ -82,6 +82,20 @@ In the server where you want to host your production instance, clone Sylph's Doc
 git clone https://github.com/shahcompbio/sylph-docker
 ```
 
+The input form is password protected, and is linked to a file that contains the username and encrpyted password pairs.
+
+```
+cd sylph-docker
+
+touch .users
+```
+Each password should be encrypted:
+
+```
+openssl passwd -apr1
+```
+
+
 Then run Docker Compose:
 
 ```
