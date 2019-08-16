@@ -15,9 +15,10 @@
       "mira/mira-loading-data"
     ],
     "Sylph": [
-      "sylph/sylph-overview",
-      "sylph/sylph-changelog",
-      "sylph/sylph-deploy"
+      "sylph/overview",
+      "sylph/changelog",
+      "sylph/deploy",
+      "sylph/env-files"
     ]
   }
 }

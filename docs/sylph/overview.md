@@ -1,5 +1,4 @@
 ---
-id: sylph-overview
 title: Sylph - Overview
 sidebar_label: Overview
 ---
@@ -23,12 +22,11 @@ Sylph is the cohort level sample processing timelines for MSK SPECTRUM. It highl
 
 ## Current Features
 
-- Sample processing timeline for each patient
+- Sample processing timeline for each patient with support for recurrent cases
 - Sample processing workflow
 - Input form to add / edit patient timelines
 
 ## Future Features
 
-- Multiple timelines for an individual timelines (recurrent cases)
 - Ability to sort chronologically and by ID
 - Input free form notes for individual patient
