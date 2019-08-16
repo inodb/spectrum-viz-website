@@ -16,6 +16,8 @@ sidebar_label: System Architecture
 
 5. **Mira** (scRNA) is hosted on an **Azure VM**. A **Docker Compose** instance runs within it. The main webserver redirects requests with `/scrna/` to the VM's IP address.
 
+6. **Hydra** is hosted on the **MSK server**, self contained in a **Docker Compose** instance where only the port to its own nginx layer is exposed. The main webserver connects to it through port 5005, and redirects requests with `/cohort/` to this port
+
 ## Staging Architecture
 
 TBD

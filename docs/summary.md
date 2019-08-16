@@ -12,11 +12,11 @@ Visualization for [MSK SPECTRUM](http://spectrum.mskcc.org) comprises of multipl
 
 ## Hydra (Cohort Event Timelines)
 
-Production | [Development](http://spectrum-cohort-event.eastus.cloudapp.azure.com)
+[Production](http://spectrum.mskcc.org/cohort) | [Development](http://40.87.0.178/hydra/)
 
 ## Sylph (Sample Processing Timelines)
 
-[Production](http://spectrum.mskcc.org/cohort/surgery) | Development
+[Production](http://spectrum.mskcc.org/cohort/surgery) | [Development](http://40.87.0.178/sylph/)
 
 ## Alhena (Single Cell DNA)
 
@@ -24,4 +24,4 @@ Production | Development
 
 ## Mira (Single Cell RNA)
 
-[Production](http://spectrum.mskcc.org/scrna/) | [Development](http://spectrum-scrna.eastus.cloudapp.azure.com)
+[Production](http://spectrum.mskcc.org/scrna/) | Development
