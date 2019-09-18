@@ -1,5 +1,4 @@
 ---
-id: mira-overview
 title: Mira - Overview
 sidebar_label: Overview
 ---

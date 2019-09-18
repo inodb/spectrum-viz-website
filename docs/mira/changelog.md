@@ -1,14 +1,16 @@
 ---
-id: mira-changelog
 title: Mira - Changelog
 sidebar_label: Changelog
 ---
 
 All notable changes to Mira will be documented here. The unreleased version is contained in the `staging` branch. The current released version is in `master`.
 
-## 0.0.2 (unreleased)
+## 0.0.2 (released - August 1 2019)
 
 ### Added
+
+- Patient-level
+- CellAssign
 
 ### Changed
 

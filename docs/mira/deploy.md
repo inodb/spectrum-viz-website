@@ -1,5 +1,4 @@
 ---
-id: mira-deploy
 title: Mira - Deployment
 sidebar_label: Deployment
 ---

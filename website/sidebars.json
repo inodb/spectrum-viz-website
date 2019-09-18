@@ -9,10 +9,10 @@
       "hydra/hydra-deploy"
     ],
     "Mira": [
-      "mira/mira-overview",
-      "mira/mira-changelog",
-      "mira/mira-deploy",
-      "mira/mira-loading-data"
+      "mira/overview",
+      "mira/changelog",
+      "mira/deploy",
+      "mira/loading-data"
     ],
     "Sylph": [
       "sylph/overview",

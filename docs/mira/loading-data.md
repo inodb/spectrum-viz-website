@@ -1,5 +1,4 @@
 ---
-id: mira-loading-data
 title: Mira - Loading Data
 sidebar_label: Loading Data
 ---
