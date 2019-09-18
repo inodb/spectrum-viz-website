@@ -1,7 +1,7 @@
 {
   "docs": {
     "Overview": ["summary", "architecture"],
-    "Alhena": ["alhena-overview"],
+    "Alhena": ["alhena/overview", "alhena/changelog", "alhena/todo"],
     "Cassiopeia": ["cassiopeia-overview"],
     "Hydra": ["hydra/overview", "hydra/changelog", "hydra/deploy"],
     "Mira": [
