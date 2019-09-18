@@ -1,5 +1,4 @@
 ---
-id: hydra-changelog
 title: Hydra - Changelog
 sidebar_label: Changelog
 ---

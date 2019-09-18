@@ -1,5 +1,4 @@
 ---
-id: hydra-overview
 title: Hydra - Overview
 sidebar_label: Overview
 ---

@@ -3,11 +3,7 @@
     "Overview": ["summary", "architecture"],
     "Alhena": ["alhena-overview"],
     "Cassiopeia": ["cassiopeia-overview"],
-    "Hydra": [
-      "hydra/hydra-overview",
-      "hydra/hydra-changelog",
-      "hydra/hydra-deploy"
-    ],
+    "Hydra": ["hydra/overview", "hydra/changelog", "hydra/deploy"],
     "Mira": [
       "mira/overview",
       "mira/changelog",

@@ -1,5 +1,4 @@
 ---
-id: hydra-deploy
 title: Hydra - Deployment
 sidebar_label: Deployment
 ---
