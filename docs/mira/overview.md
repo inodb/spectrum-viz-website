@@ -7,8 +7,19 @@ Mira is a single cell RNA (scRNA) dashboard for MSK SPECTRUM. It takes the JSON 
 
 ## Goals
 
+**Functional**
+
 - Allow users to browse through the processed data for QC / low level analysis purposes
 - Allow users to access the data for further analysis
+
+**Non Functional**
+
+- Maintain fast interactivity after initial load
+
+## Assumptions
+
+- User access through computer (no mobile support)
+- Minimum screen size is 1280 x 800
 
 ## Repositories
 
@@ -29,15 +40,9 @@ Mira is a single cell RNA (scRNA) dashboard for MSK SPECTRUM. It takes the JSON 
   - [Apollo](https://www.apollographql.com/)
 - [Elasticsearch](https://www.elastic.co/products/elasticsearch)
 
-## Current Features
+## Major Features
 
-- Viewing of data on a per sample basis
-- Interactive tSNE plot with ability to colour by cell type, cluster, or gene expression
+- Viewing of data on a per patient, sample, basis
+- Interactive tSNE plot with ability to colour by cell type or gene expression
 - Bar / Line chart for distribution of colouring labels
-
-## Future Features
-
-- View data amongst other levels (per patient, across all patients, cancer cells only, etc)
-- QC table with various metrics (per sample)
-- Compare gene expression across multiple genes simultaneously
-- Users can download underlying data for further analysis
+- QC table with various metrics

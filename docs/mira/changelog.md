@@ -5,12 +5,24 @@ sidebar_label: Changelog
 
 All notable changes to Mira will be documented here. The unreleased version is contained in the `staging` branch. The current released version is in `master`.
 
+## 0.0.3
+
+### Added
+
+- Selection based off patient, sample, CD45 sorting
+
+### Changed
+
+- Spectrum header update
+- Overall aesthetics
+- Scatterplot -> hexbin density plot with scatterplot by cell type overlaid
+
 ## 0.0.2 (released - August 1 2019)
 
 ### Added
 
-- Patient-level
-- CellAssign
+- Patient-level dashboard
+- CellAssign table
 
 ### Changed
 
