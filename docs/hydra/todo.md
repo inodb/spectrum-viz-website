@@ -1,6 +1,6 @@
 ---
 title: Hydra - To Do
-sidebar_label: To Do
+sidebar_label: "Hydra: To Do"
 ---
 
 ## Future Features

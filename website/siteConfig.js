@@ -79,7 +79,7 @@ const siteConfig = {
   onPageNav: "separate",
   // No .html extensions for paths.
   cleanUrl: true,
-
+  docsSideNavCollapsible: true,
   // Open Graph and Twitter card images.
   ogImage: "img/icon.png",
   twitterImage: "img/icon.png"

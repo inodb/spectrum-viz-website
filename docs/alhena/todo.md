@@ -1,6 +1,6 @@
 ---
 title: Alhena - To Do
-sidebar_label: To Do
+sidebar_label: "Alhena: To Do"
 ---
 
 ## Tasks

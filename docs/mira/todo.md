@@ -1,11 +1,11 @@
 ---
 title: Mira - To Do
-sidebar_label: To Do
+sidebar_label: "Mira: To Do"
 ---
 
 ## Tasks
 
-### QoC updates
+### QoL updates
 
 1. Alphabetize selection dropdowns for patient, sample
 2. Add ability to clear selection from dropdown
