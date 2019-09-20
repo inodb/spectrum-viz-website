@@ -34,3 +34,13 @@ sidebar_label: Sprint
 2. Update data for Hydra
 
 ### Aim #3: [Authentication layer for Alhena](alhena/todo#authentication-layer)
+
+### Aim #4: Misc Montage stuff
+
+1. [Load additional data](other-todo#loading-data)
+
+   1. Collaborator data
+   2. Cellmine
+
+2. [Montage VM set up docs](other-todo#montage)
+3. [is_contaminated field](other-todo#montage)

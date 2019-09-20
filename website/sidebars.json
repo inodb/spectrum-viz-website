@@ -6,7 +6,8 @@
       "sprint",
       "alhena/todo",
       "hydra/todo",
-      "mira/todo"
+      "mira/todo",
+      "other-todo"
     ],
     "Alhena": ["alhena/overview", "alhena/changelog"],
     "Cassiopeia": ["cassiopeia-overview"],
