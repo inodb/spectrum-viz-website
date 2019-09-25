@@ -38,6 +38,7 @@ sidebar_label: "Mira: To Do"
 1. Reload all samples into Spectrum production instance
 2. Write module to parallelize loading
 3. Remove "" gene records when loading
+4. Pull data from rdata, not from JSON (Nick will write API for this)
 
 ### Automate build
 
@@ -76,13 +77,26 @@ Web summaries are provided by CellRanger and is packaged when the raw data is do
 
 ### Cell type proportion bar chart
 
-1. Shows proportion of cells amongst samples on a cohort, patient, sample level
+1. On main page, shows proportion of cells per patient.
+   1. Should also be able to see per patient, split by site
+2. On patient-level dashboard, should see per site
+3. On sample-level, should see counts of cells
 
 ### View data on various levels
 
-1. Cohort level
-2. Cell type level (cohort, patient, sample)
+1. Cell type level
+2. Site specific level
 
+### Filter cells shown
+
+1. By site, cell type, surgery, pre/post
+
+### Additional colouring categories
+
+1. Additional categorical/numerical things that can be scraped from the data
+2. By surgery, pre/post treatment
+3. By probability of cell type assignment
+   
 ### Support multiple gene expression plots
 
 1. Want to compare gene expression across multiple genes simultaneously
