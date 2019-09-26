@@ -25,8 +25,12 @@ sidebar_label: Sprint
    3. Remove "" gene records when loading
 
 4. [Web summary pages](mira/todo#web-summary-pages)
-   1. Enable users (or admin) to create their own accounts
-   2. Enable users to reset their own passwords
+   1. Transfer files somewhere on the production instance (ws?)
+      1. May need to mount new disk for this data
+   2. Edit nginx config to redirect URL requests to appropriate folder
+   3. Edit QC table to link
+
+
 
 ### Aim #2: Update Hydra and Sylph for next Spectrum meeting
 
@@ -34,6 +38,8 @@ sidebar_label: Sprint
 2. Update data for Hydra
 
 ### Aim #3: [Authentication layer for Alhena](alhena/todo#authentication-layer)
+1. Enable users (or admin) to create their own accounts
+2. Enable users to reset their own passwords
 
 ### Aim #4: Misc Montage stuff
 
