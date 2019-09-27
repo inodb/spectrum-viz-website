@@ -30,7 +30,10 @@ sidebar_label: Sprint
    2. Edit nginx config to redirect URL requests to appropriate folder
    3. Edit QC table to link
 
-
+5. [Optimize deployment setup](mira/todo#optimize-deployment-setup)
+   1. Split docker-compose into a database file, and an app (graphQL + React) file
+      1. Propogate on Spectrum staging instance
+      2. Create new Spectrum prod instance, and then propogate
 
 ### Aim #2: Update Hydra and Sylph for next Spectrum meeting
 

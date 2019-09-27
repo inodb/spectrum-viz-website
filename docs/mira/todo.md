@@ -26,6 +26,9 @@ sidebar_label: "Mira: To Do"
 1. Split docker-compose into a database file, and an app (graphQL + React) file
    1. Propogate on Spectrum staging instance
    2. Create new Spectrum prod instance, and then propogate
+
+NOTE: Looks like on the db nodes, we'll have to figure out some nginx configuration to expose it publicly (especially in production)
+
 2. Finish refactoring out environment configs
    1. Propogate on dev + document
    2. Progogate on Spectrum staging instance + document

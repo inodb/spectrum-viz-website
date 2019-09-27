@@ -70,3 +70,7 @@ Desperately want to add testing on all levels.
 4. Sylph
    1. GraphQL (resolvers)
    2. React
+
+
+## Domain name
+It would be good to have a dedicate domain stuff for all viz stuff. Especially as we deploy other things through production. Also having separate links for staging and what not would be super valuable.
