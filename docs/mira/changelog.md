@@ -10,6 +10,7 @@ All notable changes to Mira will be documented here. The unreleased version is c
 ### Added
 
 - Selection based off patient, sample, CD45 sorting
+- `.env` files for base URLs to enable quicker setup of instances
 
 ### Changed
 

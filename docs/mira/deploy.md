@@ -53,10 +53,16 @@ Clone [Mira's React](https://github.com/shahcompbio/mira-react) repository:
 git clone https://github.com/shahcompbio/mira-react.git
 ```
 
-Go into the directory and install the dependencies:
+Go into the directory, add an `.npmrc` file with the fontawesome token (provided by Samantha). 
 
 ```
 cd mira-react
+touch .npmrc
+```
+
+Install the dependencies:
+
+```
 yarn install
 ```
 
@@ -70,7 +76,16 @@ This should automatically open `http://localhost:3000` on your browser. If not, 
 
 ## Deploy: Staging
 
-TBD
+UPDATE: This is now fairly similar to production. Need to flesh out instructions at a later point in time.
+
+1. Create VM for ES nodes
+2. Pull down docker repo for Mira, pull down docker images for db
+3. Start docker-compose
+
+4. Create VM for ws (install nginx?)
+5. Pull down docker images for app
+6. Start docker-compose
+7. Here is the right nginx config (ask Sam for now)
 
 ## Deploy: Production
 
@@ -141,13 +156,3 @@ docker-compose up -d
 
 ```
 
-## Future Plans
-
-- Complete Staging set up
-- Provide example data for them to load
-- Automate deployment of staging / production (TravisCI?)
-- Automate rebuilding of images when pushed to repo (Docker Hub already seems to support this)
-
-```
-
-```

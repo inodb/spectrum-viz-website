@@ -16,6 +16,7 @@
       "mira/overview",
       "mira/changelog",
       "mira/deploy",
+      "mira/env-files",
       "mira/loading-data"
     ],
     "Sylph": [
