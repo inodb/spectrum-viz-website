@@ -32,6 +32,9 @@ Eventually need to swap Oleg's loader with this one.
 
 Development is currently not managed by us, although a lot of the work overlaps with efforts we're making for Alhena and Mira. So need to get a better handle on what they've been adding and see whether we can merge that with our work.
 
+### Clean up loader files
+I think I still have one repo for mira-db -- need to remove that to reduce confusion.
+
 ### Scaling
 
 Want to parallelize loading. Tried with generators and processes but there's a lock-thread issue. Diljot suggested looking into kafka or rabbitmq
