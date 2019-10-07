@@ -31,6 +31,10 @@ Would like to clean up Mira's current code base (reduce tech debt), then focus o
 3. Enable each dashboard to also be set up in a separate instance (via environmental configs)
 4. Add ansible scripts to automatically create VMs for loading, webservers, and ES nodes
 
+### Elasticsearch Loaders
+
+TBD
+
 ## Q1 2020 (Jan - Mar 2020)
 
 ### Alhena

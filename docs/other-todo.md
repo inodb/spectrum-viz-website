@@ -7,8 +7,8 @@ AKA the junk drawer of todos. Still very important to do, but hard to organize. 
 
 ## Montage
 
-1. Montage VM setup docs
-2. is_contaminated field in production Montage
+1. is_contaminated field in production Montage
+   - NOTE: Currently waiting for reload of current data before we can propogate it to prod
 
 ## Bit.IO
 
@@ -23,8 +23,10 @@ AKA the junk drawer of todos. Still very important to do, but hard to organize. 
 ### Loading Data
 
 1. Collaborator data into separate Montage instances
-2. New Cellmine data
-   1. Need to collect appropriate metadata for it
+   1. Data is still being loaded
+   2. Set up webserver + certificates for instances to redirect to different subdomains
+2. Cellmine
+   - NOTE: Everything is currently loaded, but is just awaiting some checking and minor cleanup.
 
 ### New Montage loader (by Andrew + crew)
 
@@ -32,7 +34,10 @@ Eventually need to swap Oleg's loader with this one.
 
 Development is currently not managed by us, although a lot of the work overlaps with efforts we're making for Alhena and Mira. So need to get a better handle on what they've been adding and see whether we can merge that with our work.
 
+Arfath and Spencer are currently undergoing a redesign of all the work that has been done in an effort to further emcompass future data types, and to be maintainable. TBD on the exact details of this.
+
 ### Clean up loader files
+
 I think I still have one repo for mira-db -- need to remove that to reduce confusion.
 
 ### Scaling
@@ -74,6 +79,8 @@ Desperately want to add testing on all levels.
    1. GraphQL (resolvers)
    2. React
 
-
 ## Domain name
-It would be good to have a dedicate domain stuff for all viz stuff. Especially as we deploy other things through production. Also having separate links for staging and what not would be super valuable.
+
+We have bought a domain name and would like to set things up properly?
+
+1. Link staging instances through there

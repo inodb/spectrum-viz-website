@@ -24,8 +24,7 @@ sidebar_label: "Mira: To Do"
 ### Optimize deployment setup
 
 1. Split docker-compose into a database file, and an app (graphQL + React) file
-   1. Propogate on Spectrum staging instance
-   2. Create new Spectrum prod instance, and then propogate
+   1. Create new Spectrum prod instance, and then propogate
 
 NOTE: Looks like on the db nodes, we'll have to figure out some nginx configuration to expose it publicly (especially in production)
 
@@ -41,7 +40,6 @@ NOTE: Looks like on the db nodes, we'll have to figure out some nginx configurat
 1. Reload all samples into Spectrum production instance
 2. Write module to parallelize loading
 3. Remove "" gene records when loading
-4. Pull data from rdata, not from JSON (Nick will write API for this)
 
 ### Automate build
 
@@ -72,9 +70,23 @@ Web summaries are provided by CellRanger and is packaged when the raw data is do
 ### Automate loading
 
 1. Should specify what patient to load
-2. Downloads from Azure blob
+2. Downloads from Juno (via Isabl?)
 3. Unzips and feeds it into the right python call
 4. Later, also transfers the HTML web summary files into the right place
+
+### Reorganization of dashboards
+
+To better accommodate future dashboards, we want to reorganize the hierarchy.
+
+- Sample is the nuclear level
+- Each future dashboard will be composed of subsets of these samples
+- Dashboard between types are very similar (if not the same)
+
+So on the URL side, users can access a dashboard with `/<dashboard-type>/<dashboard-id>`, such as `/sample/SPECTRUM-OV-005_S1_CD45N_LEFT_ADNEXA` or `/patient/SPECTRUM-OV-005_CD45N`
+
+1. GraphQL layer for new db schema
+2. React graphQL queries are updated
+3. React-Router URLs are adjusted
 
 ## Features
 
@@ -99,7 +111,7 @@ Web summaries are provided by CellRanger and is packaged when the raw data is do
 1. Additional categorical/numerical things that can be scraped from the data
 2. By surgery, pre/post treatment
 3. By probability of cell type assignment
-   
+
 ### Support multiple gene expression plots
 
 1. Want to compare gene expression across multiple genes simultaneously

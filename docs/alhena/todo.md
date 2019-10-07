@@ -29,7 +29,9 @@ NOTE: We want to share a lot of the common modules with Mira. And as we expand a
 ### Authentication Layer
 
 1. Allow users to create their own accounts
-2. Allow users to reset password when needed
+   1. Needs to be deployed
+2. Check into whether we can connect to MSK's ldap system
+   1. If not, then create admin panel + mail server
 3. Once logged in, only show content that user is permitted to see
 
 ### Cellscape

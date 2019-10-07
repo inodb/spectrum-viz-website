@@ -28,11 +28,13 @@ sidebar_label: "Hydra: To Do"
    1. Propogate on Spectrum staging instance
    2. Propogate on Spectrum prod instance
 
-### Data
+### redCAP reconnection
 
-1. Document what columns are needed (and the source of those data)
+RedCAP has started doing nightly syncs with IDB. It'll be good to assess how much of the data that we need we can pull, if there is any leading data we need (like IDs?) and reconnect if it is viable.
 
-!!! Currently awaiting for a better way of accessing the data. It's done through spreadsheets that eventually need to be manually curated.
+1. Document what columns are needed (and current source of data)
+2. Assess what is being stored in RedCAP and how that aligns with our columns
+3. Rewrite graphQL layer to pull from RedCAP
 
 ## Features
 
