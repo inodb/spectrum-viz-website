@@ -5,7 +5,7 @@ sidebar_label: Changelog
 
 All notable changes to Mira will be documented here. The unreleased version is contained in the `staging` branch. The current released version is in `master`.
 
-## 0.0.3
+## 0.0.3 (releaesd - Nov 12, 2019)
 
 ### Added
 
@@ -15,8 +15,10 @@ All notable changes to Mira will be documented here. The unreleased version is c
 ### Changed
 
 - Spectrum header update
-- Overall aesthetics
+- Revamp of QC table, to combine with sample selection and filtering
 - Scatterplot -> hexbin density plot with scatterplot by cell type overlaid
+- Readded gene selection
+- Removal of abundance plot in favor of proper plot legend
 - Loader pulls from rdata, not JSON
 - Loader pulls metadata from Google Sheets
 

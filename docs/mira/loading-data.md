@@ -13,25 +13,22 @@ Using the loaders will populate Elasticsearch with:
 
 There are two ways to load data into Elasticsearch - using a virtual environment or running a pre-build Docker image.
 
-## Required files
+## Input
 
-### JSON data files
+### .rdata files
 
-Mira's input data comes from the [scRNA pipeline](https://github.com/shahcompbio/SCRNApipeline) as a collection of JSON files - one for each sample. These JSON files are contained in a directory (one per patient).
+Mira's input data comes from the [scRNA pipeline](https://github.com/shahcompbio/SCRNApipeline). It is able to read off the resulting rdata file.
 
-### Metadata YAML
+### Metadata Table
 
-This should be in the same directory as the JSON files and should be named `patient_metadata.yaml`
+Metadata for each sample is contained in a google sheet. We currently pull these columns from the sheet `sample_metadata`:
 
-Here is an example:
-
-```
-patient_id: Patient_09443_D
-sample_ids:
-  - ABDOM-CD45N_IGO_09443_D_2
-  - ABDOM-CD45P_IGO_09443_D_1
-  - ASC-CD45P_IGO_09443_D_13
-```
+- nick_unique_id
+- patient_id
+- tumour_site
+- sort_parameters
+- therapy
+- time
 
 ## Virtual Environment (Development)
 
@@ -46,7 +43,7 @@ This method is recommended while doing development on the loaders.
 Clone Mira's database repository:
 
 ```
-git clone https://github.com/shahcompbio/mira-db
+git clone https://github.com/shahcompbio/es-loaders
 ```
 
 Create and start a new python3 environment
@@ -65,11 +62,44 @@ pip install -r requirements.txt
 
 ### Run loader
 
+There are many different scripts:
+
+To bulk load all new libraries (it will compare google sheet list to what's in Mira's ES instance and load the new ones IF that rdata file is available in the directory)
+
 ```
-python dim_red_loader.py /path/to/json/directory
+python mira_bulk_loader /path/to/rdata/directory/ <ES_host> <ES_port>
+```
+
+To load an individual file:
+
+```
+python mira_loader.py /path/to/rdata/file
+```
+
+To delete entire sample from Elasticsearch
+
+```
+python mira_cleaner.py <type of data> <data ID> <ES_host> <ES_port>
+
+python mira_cleaner.py "sample" SPECTRUM-OV-003_S1_CD45N_RIGHT_ADNEXA ... ...
+```
+
+To load rho data
+NOTE: You need to go into rho_loader.py and update the host name because I haven't done that yet
+
+```
+python rho_loader.py
+```
+
+At some point I needed to check for duplicate loading instances, this script will do that and delete duplicate libraries (then you can reload them again).
+
+```
+python mira_data_checker.py
 ```
 
 ## Docker
+
+NOTE: Currently outdated as I'm running it all through venv right now.
 
 This method is recommended in all other situations.
 

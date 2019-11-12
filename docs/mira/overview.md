@@ -42,7 +42,6 @@ Mira is a single cell RNA (scRNA) dashboard for MSK SPECTRUM. It takes the JSON 
 
 ## Major Features
 
-- Viewing of data on a per patient, sample, basis
+- Viewing of data on a per sample basis
 - Interactive tSNE plot with ability to colour by cell type or gene expression
-- Bar / Line chart for distribution of colouring labels
 - QC table with various metrics

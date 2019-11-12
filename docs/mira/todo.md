@@ -3,43 +3,25 @@ title: Mira - To Do
 sidebar_label: "Mira: To Do"
 ---
 
-## Tasks
+## CURRENT SPRINT
+
+1. Finish base refactoring
+2. Add support for patient level dashboard
+   NOTE: The main issue is that there are several spots where I hardcoded for sample level for simplicity. So a lot of the work will be unravelling that a little bit.
+   1. Loading patient data
+   2. GraphQL layer
+   3. React
+
+## Backlog
 
 ### QoL updates
 
-1. Alphabetize selection dropdowns for patient, sample
-2. Add ability to clear selection from dropdown
-3. Order QC table by selection (alphabetical)
-4. Split QC table sample_id column into sample, then CD45 sort status
-5. Format sample_id string better (remove "\_", maybe not all caps)
-6. Gene selection dropdown should prioritize exact matches
-7. Refactor code to use React hooks
-
-### Bugs
-
-1. Gene selection dropdown has been removed
-2. Patient level view has been removed
-3. URL doesn't update when sample is selected
+1. Label selection dropdown should prioritize exact matches
 
 ### Optimize deployment setup
 
-1. Split docker-compose into a database file, and an app (graphQL + React) file
-   1. Create new Spectrum prod instance, and then propogate
-
-NOTE: Looks like on the db nodes, we'll have to figure out some nginx configuration to expose it publicly (especially in production)
-
-2. Finish refactoring out environment configs
-   1. Propogate on dev + document
-   2. Progogate on Spectrum staging instance + document
-   3. Propogate on Spectrum production instance + document
-3. Write ansible script to automate creation of nodes
+1. Write ansible script to automate creation of nodes
    1. Elasticsearch DB nodes
-
-### Loading Tasks
-
-1. Reload all samples into Spectrum production instance
-2. Write module to parallelize loading
-3. Remove "" gene records when loading
 
 ### Automate build
 
@@ -59,8 +41,7 @@ Web summaries are provided by CellRanger and is packaged when the raw data is do
 
 ### Polish up Spectrum version
 
-1. Add Spectrum favicon
-2. Have all Spectrum-specific components appear only on Spectrum-related builds (important for indepdent instances - like for the BCCRC)
+1. Have all Spectrum-specific components appear only on Spectrum-related builds (important for indepdent instances - like for the BCCRC)
    1. Favicon
    2. Web title
    3. Header
@@ -71,24 +52,7 @@ Web summaries are provided by CellRanger and is packaged when the raw data is do
 
 1. Should specify what patient to load
 2. Downloads from Juno (via Isabl?)
-3. Unzips and feeds it into the right python call
-4. Later, also transfers the HTML web summary files into the right place
-
-### Reorganization of dashboards
-
-To better accommodate future dashboards, we want to reorganize the hierarchy.
-
-- Sample is the nuclear level
-- Each future dashboard will be composed of subsets of these samples
-- Dashboard between types are very similar (if not the same)
-
-So on the URL side, users can access a dashboard with `/<dashboard-type>/<dashboard-id>`, such as `/sample/SPECTRUM-OV-005_S1_CD45N_LEFT_ADNEXA` or `/patient/SPECTRUM-OV-005_CD45N`
-
-1. GraphQL layer for new db schema
-2. React graphQL queries are updated
-3. React-Router URLs are adjusted
-
-## Features
+3. Later, also transfers the HTML web summary files into the right place
 
 ### Cell type proportion bar chart
 
