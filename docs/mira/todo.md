@@ -5,14 +5,22 @@ sidebar_label: "Mira: To Do"
 
 ## CURRENT SPRINT
 
-1. Finish base refactoring
-2. Add support for patient level dashboard
-   NOTE: The main issue is that there are several spots where I hardcoded for sample level for simplicity. So a lot of the work will be unravelling that a little bit.
+1. Add support for patient level dashboard
    1. Loading patient data
    2. GraphQL layer
    3. React
+2. Add support for subsetting / coloring:
+   1. Activated vs Exhausted Cytotoxic T cells
+   2. HR vs HRD Cancer cells
+   3. M1 vs M2 Macrophages
 
 ## Backlog
+
+### Legend improvements
+
+1. More descriptive tooltip (# cells in that group, ranges where needed)
+2. Proper highlighting of parts of legend (outline? also somewhere where it states what's been highlighted)
+3. "Select" to hold highlight (so we can do additional interactions with individual cells)
 
 ### QoL updates
 

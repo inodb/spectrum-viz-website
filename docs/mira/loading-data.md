@@ -71,15 +71,17 @@ python mira_bulk_loader /path/to/rdata/directory/ <ES_host> <ES_port>
 ```
 
 To load an individual file:
+NOTE: We assume the dashboard_id matches the file name
+NOTE: dashboard_type is currently one of `sample` or `patient`
 
 ```
-python mira_loader.py /path/to/rdata/file
+python mira_cli.py --host <ES_host> --port <ES_port> load-analysis /path/to/rdata/file/dir <dashboard_id>  <dashboard_type>
 ```
 
 To delete entire sample from Elasticsearch
 
 ```
-python mira_cleaner.py <type of data> <data ID> <ES_host> <ES_port>
+python mira_cli.py --host <ES_host> --port <ES_port> clean-analysis <type of data> <data ID>
 
 python mira_cleaner.py "sample" SPECTRUM-OV-003_S1_CD45N_RIGHT_ADNEXA ... ...
 ```

@@ -5,7 +5,23 @@ sidebar_label: Changelog
 
 All notable changes to Mira will be documented here. The unreleased version is contained in the `staging` branch. The current released version is in `master`.
 
-## 0.0.3 (releaesd - Nov 12, 2019)
+## 0.1.0
+
+### Added
+
+- Coloring on site, surgery, treatment for non-sample dashboards
+
+### Changed
+
+- Metadata table support for merged dashboards
+- Metadata table aesthetic changes
+- CLI for loader
+- Loading support for patient dashboards
+  - bulk loading by type
+  - memory improvements for gene matrix
+  - merged metadata and dashboard entry together
+
+## 0.0.3 (released - Nov 12, 2019)
 
 ### Added
 

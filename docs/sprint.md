@@ -60,6 +60,14 @@ sidebar_label: Sprint
    2. Cellmine
       - NOTE: Everything is currently loaded, but is just awaiting some checking and minor cleanup.
 
+### Aim #5: [Reduce Azure burden](other-todo#azure)
+
+1. Shut down unneeded VMs
+2. Put auto-shutdown on staging ones
+   1. Set up restarting docker containers when VMs are started
+3. Resize any VMs to F4s_v2 if possible
+4. Let Diljot know how many reserved instances we need
+
 ## Past Sprints
 
 <details>
