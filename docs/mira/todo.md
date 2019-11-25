@@ -16,6 +16,11 @@ sidebar_label: "Mira: To Do"
 
 ## Backlog
 
+### Bugs
+
+1. SPECTRUM-OV-007_CD45P has exactly 10000 cytotoxic T cells, which I suspect is due to hitting max return value as opposed to it being the actual number
+2. Suspcious lack of highlighting for certain sites
+
 ### Legend improvements
 
 1. More descriptive tooltip (# cells in that group, ranges where needed)

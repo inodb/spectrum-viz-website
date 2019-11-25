@@ -7,7 +7,7 @@ All notable changes to Mira will be documented here. The unreleased version is c
 
 ## 0.1.0
 
-### Added
+### Added (released - Nov 25, 2019)
 
 - Coloring on site, surgery, treatment for non-sample dashboards
 
@@ -20,6 +20,7 @@ All notable changes to Mira will be documented here. The unreleased version is c
   - bulk loading by type
   - memory improvements for gene matrix
   - merged metadata and dashboard entry together
+- Bug fixes
 
 ## 0.0.3 (released - Nov 12, 2019)
 
