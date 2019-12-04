@@ -118,7 +118,9 @@ PUBLIC_URL="<URL_HERE>"
 ```
 
 ```
-docker build . -t sylph-react --build.arg ENV_PATH=".env"
+docker build . -t sylph-react --build-arg BUILD_ENV="staging"
+
+docker build . -t sylph-react --build-arg BUILD_ENV="prod"
 ```
 
 Then tag and push to Docker Hub

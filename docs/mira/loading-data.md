@@ -37,6 +37,7 @@ This method is recommended while doing development on the loaders.
 ### System Requirements
 
 - Python 3
+- R (https://www.r-project.org/)
 
 ### Setup Virtual Environment
 
@@ -58,6 +59,18 @@ Install dependencies
 
 ```
 pip install -r requirements.txt
+```
+
+Install R packages
+
+```
+R -e "install.packages('BiocManager')"
+
+R -e "BiocManager::install()"
+
+R -e "BiocManager::install('SingleCellExperiment')"
+
+R -e "BiocManager::install('scater')"
 ```
 
 ### Run loader
