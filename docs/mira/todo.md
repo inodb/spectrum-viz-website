@@ -20,6 +20,8 @@ sidebar_label: "Mira: To Do"
 
 1. SPECTRUM-OV-007_CD45P has exactly 10000 cytotoxic T cells, which I suspect is due to hitting max return value as opposed to it being the actual number
 2. Suspcious lack of highlighting for certain sites
+3. Table header shows > when you scroll up
+4. Fairly sure I'm hitting query limits on patient level data
 
 ### Legend improvements
 
