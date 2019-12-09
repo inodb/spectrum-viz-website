@@ -16,6 +16,7 @@
       "mira/overview",
       "mira/changelog",
       "mira/deploy",
+      "mira/elasticsearch",
       "mira/loading-data"
     ],
     "Sylph": ["sylph/overview", "sylph/changelog", "sylph/deploy"]
