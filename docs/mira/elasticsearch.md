@@ -61,16 +61,19 @@ NOTE: This was designed to be flexible, but currently only a very small subset o
 }
 ```
 
-### `sample_cells`
+### `dashboard_cells`
 
-Metadata for each cell in each sample
+Metadata for each cell in each dashboard.
 
-NOTE: This will probably be changed to dashboard_cells, as it was mistakenly assumed that cell_id was unique across all samples.
+NOTE: Even though the cells in merged sample dashboards are the same as the sample, there's no guarantee that they have the same cell ID, hence we loaded the cells separately.
 
 ```
 {
+    "dashboard_id": String,
     "sample_id" : String,
     "cell_id" : String,
+    "x": Float,
+    "y": Float,
     "cell_type" : String (must match with rho),
     "B cell probability" : Float,
     "Plasma cell probability" : Float,
@@ -85,21 +88,6 @@ NOTE: This will probably be changed to dashboard_cells, as it was mistakenly ass
     "Myofibroblast probability" : Float,
     "Vascular SMC probability" : Float,
     "Endothelial cell probability" : Float
-}
-```
-
-### `dashboard_redim_<dashboard_id>`
-
-x and y coordinates for reduced dimensionality plot for a given dashboard.
-
-NOTE: There is one index for every dashboard
-
-```
-{
-    "cell_id": String,
-    "x": Float,
-    "y": Float,
-    "dashboard_id": String
 }
 ```
 

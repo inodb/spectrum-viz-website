@@ -83,12 +83,24 @@ To bulk load all new libraries (it will compare google sheet list to what's in M
 python mira_bulk_loader /path/to/rdata/directory/ <ES_host> <ES_port>
 ```
 
-To load an individual file:
+To load data, you can load as one of the following:
+
+1. Individual dashboard ID
+2. All dashboards of a certain type not loaded yet
+3. Individual dashboard ID with related samples (e.g. by patient ID and all samples with the same patient ID)
+
+You can also choose to force reload an existing dashboard
 NOTE: We assume the dashboard_id matches the file name
 NOTE: dashboard_type is currently one of `sample` or `patient`
 
 ```
-python mira_cli.py --host <ES_host> --port <ES_port> load-analysis /path/to/rdata/file/dir <dashboard_id>  <dashboard_type>
+python mira_cli.py --host <ES_host> --port <ES_port> load-analysis --type <dashboard_type> --id <dashboard_id>  /path/to/rdata/file/dir
+
+python mira_cli.py --host <ES_host> --port <ES_port> load-analysis --type <dashboard_type> --load-new /path/to/rdata/file/dir
+
+python mira_cli.py --host <ES_host> --port <ES_port> load-analysis --type <dashboard_type> --id <dashboard_id> --load-support /path/to/rdata/file/dir
+
+python mira_cli.py --host <ES_host> --port <ES_port> load-analysis --type <dashboard_type> --id <dashboard_id> --reload /path/to/rdata/file/dir
 ```
 
 To delete entire sample from Elasticsearch
@@ -100,16 +112,24 @@ python mira_cleaner.py "sample" SPECTRUM-OV-003_S1_CD45N_RIGHT_ADNEXA ... ...
 ```
 
 To load rho data
-NOTE: You need to go into rho_loader.py and update the host name because I haven't done that yet
 
 ```
-python rho_loader.py
+python --host <ES_host> --port <ES_port> mira_cli.py load-rho
 ```
 
-At some point I needed to check for duplicate loading instances, this script will do that and delete duplicate libraries (then you can reload them again).
+To verify load:
+
+- We check for dashboards that may have been loaded multiple times
+- We check for missing related samples for every non-sample dashboard (e.g. that all samples related to a certain patient has been loaded)
 
 ```
-python mira_data_checker.py
+python --host <ES_host> --port <ES_port> mira_cli.py verify-load
+```
+
+To check what dashboards have been loaded (against the list of all possible dashboards):
+
+```
+python --host <ES_host> --port <ES_port> mira_cli.py missing-dashboards
 ```
 
 ## Docker

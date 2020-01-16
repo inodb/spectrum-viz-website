@@ -5,6 +5,15 @@ sidebar_label: Changelog
 
 All notable changes to Mira will be documented here. The unreleased version is contained in the `staging` branch. The current released version is in `master`.
 
+## 0.2.0 (released - Jan 16, 2020)
+
+### Changed
+
+- Index for cells is now `dashboard_cells`, merges redim and sample cells indices
+- UI fixes for metadata table
+- Bug fixes for query sizes in rho table and scatterplot
+- Revamp of loading CLI
+
 ## 0.1.0
 
 ### Added (released - Nov 25, 2019)
