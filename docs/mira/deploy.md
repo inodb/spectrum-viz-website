@@ -17,7 +17,7 @@ Pull the docker image for Elasticsesarch (v.7.1.1) and then run the container:
 ```
 docker pull docker.elastic.co/elasticsearch/elasticsearch:7.1.1
 
-docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.1.1 -d
+docker run -d -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.1.1
 ```
 
 To load data, follow [these instructions](mira-loading-data).
