@@ -39,18 +39,29 @@ TBD
 
 ### Alhena
 
-1. Additional QC plots
-2. Filters + Facades
-3. Downloading data
-
-### Hydra
-
-1. Finer-grained representation of data status
-2. Add treatment information
-3. Add lab test information
+1. Chip heatmap
+2. GC bias plot with more dynamic aggregation (based off user selection)
+3. Facades from chip heatmap to other plots
+4. Quality filter
 
 ### Mira
 
 1. Automate loading of data
 2. Multiple gene expression plots
-3. Downloading data
+
+## Q2 2020
+
+### Hydra
+
+1. Connect Hydra to eLab / REDCap / Isabl
+2. Revamp front end
+3. Add status for WGS, scRNA, scDNA data
+
+### Alhena
+
+1. Remainder of QC plots
+
+### Mira
+
+1. Add prototypes to support Nick's analysis
+2. Add support for T-cell exhaustion, HRD composition
