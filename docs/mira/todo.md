@@ -5,12 +5,31 @@ sidebar_label: "Mira: To Do"
 
 ## CURRENT SPRINT
 
-## UMAP improvements
+### Cell type proportion bar chart
 
-1. Want to show density of individual labels on highlight
-   NOTE: Just want to change this to improve performance (maybe don't have to plot individual cells -- maybe just overall trends but retain the detail that people need)
+1. On main page, shows proportion of cells (for only samples)
+2. On sample-level, should see counts of cells
+
+### Filter cells shown
+
+1. By site, cell type, surgery, pre/post
+1. Add support for subsetting / coloring / proportion bar charts:
+   1. Activated vs Exhausted Cytotoxic T cells
+   2. HR vs HRD Cancer cells
+   3. M1 vs M2 Macrophages
+
+### Prototyping
+
+1.  Gene enrichment plot
+2.  Correlation plot
+3.  Housekeeping gene expression
 
 ## Backlog
+
+### Prototyping
+
+1.  Bulk export of plots given label
+2.  Volcano plots
 
 ### Legend improvements
 
@@ -55,24 +74,7 @@ Web summaries are provided by CellRanger and is packaged when the raw data is do
 
 ### Automate loading
 
-1. Should specify what patient to load
-2. Downloads from Juno (via Isabl?)
-3. Later, also transfers the HTML web summary files into the right place
-
-### Cell type proportion bar chart
-
-1. On main page, shows proportion of cells per patient.
-   1. Should also be able to see per patient, split by site
-2. On patient-level dashboard, should see per site
-3. On sample-level, should see counts of cells
-
-### Filter cells shown
-
-1. By site, cell type, surgery, pre/post
-1. Add support for subsetting / coloring:
-   1. Activated vs Exhausted Cytotoxic T cells
-   2. HR vs HRD Cancer cells
-   3. M1 vs M2 Macrophages
+1. Later, also transfers the HTML web summary files into the right place
 
 ### Download data
 

@@ -5,6 +5,20 @@ sidebar_label: Changelog
 
 All notable changes to Mira will be documented here. The unreleased version is contained in the `staging` branch. The current released version is in `master`.
 
+## 0.3.0 (unreleased)
+
+### Added
+
+- Histograms for label in each UMAP plot
+
+### Changed
+
+- UMAP plot is binned with majority/avg label colouring
+- Interaction to show density of subset
+- Remove cell type highlighting from CellAssign table
+- Add x,y position to each gene record
+- Patient dashboards merges CD45P and CD45N data
+
 ## 0.2.0 (released - Jan 16, 2020)
 
 ### Changed

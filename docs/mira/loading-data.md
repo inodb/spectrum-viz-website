@@ -7,7 +7,7 @@ sidebar_label: Loading Data
 
 Using the loaders will populate Elasticsearch with:
 
-- Cell type, cluster, and tSNE dimension data for each cell
+- Cell type (plus probabilities) and UMAP dimension data for each cell
 - Gene expression (normalized log counts) for each cell
 - Analysis metadata (patient ID and sample IDs)
 
@@ -22,6 +22,8 @@ Mira's input data comes from the [scRNA pipeline](https://github.com/shahcompbio
 ### Metadata Table
 
 Metadata for each sample is contained in a google sheet. We currently pull these columns from the sheet `sample_metadata`:
+
+NOTE: In the future this will be pulled from eLab
 
 - nick_unique_id
 - patient_id
@@ -58,7 +60,7 @@ source /path/to/new/virtual/environment/bin/activate
 Install dependencies
 
 ```
-pip install -r requirements.txt
+pip install -r mira-requirements.txt
 ```
 
 Install R packages
@@ -73,15 +75,16 @@ R -e "BiocManager::install('SingleCellExperiment')"
 R -e "BiocManager::install('scater')"
 ```
 
+To load properly, you may need to export the following variables (contact Samantha for more information):
+
+```
+GOOGLE_APP_ENGINE_DIR
+ELAB_API_KEY
+ISABL_API_URL
+ISABL_CLIENT
+```
+
 ### Run loader
-
-There are many different scripts:
-
-To bulk load all new libraries (it will compare google sheet list to what's in Mira's ES instance and load the new ones IF that rdata file is available in the directory)
-
-```
-python mira_bulk_loader /path/to/rdata/directory/ <ES_host> <ES_port>
-```
 
 To load data, you can load as one of the following:
 
@@ -107,8 +110,6 @@ To delete entire sample from Elasticsearch
 
 ```
 python mira_cli.py --host <ES_host> --port <ES_port> clean-analysis <type of data> <data ID>
-
-python mira_cleaner.py "sample" SPECTRUM-OV-003_S1_CD45N_RIGHT_ADNEXA ... ...
 ```
 
 To load rho data
@@ -134,7 +135,7 @@ python --host <ES_host> --port <ES_port> mira_cli.py missing-dashboards
 
 ## Docker
 
-NOTE: Currently outdated as I'm running it all through venv right now.
+**NOTE: Currently outdated as I'm running it all through venv right now.**
 
 This method is recommended in all other situations.
 

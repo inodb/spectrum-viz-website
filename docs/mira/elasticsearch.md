@@ -32,7 +32,7 @@ Metadata for each dashboard loaded into Mira.
     "dashboard_id": String,
     "type": String -> "sample"|"patient",
     "patient_id": String,
-    "sort": String,
+    "sort": [String],
     "sample_ids": [String],
     "surgery": [String],
     "treatment": [String],
@@ -102,6 +102,8 @@ NOTE: There is one index for every dashboard
     "cell_id": String,
     "gene": String,
     "log_count": Float,
-    "dashboard_id": String
+    "dashboard_id": String,
+    "x": Float,
+    "y": Float,
 }
 ```
