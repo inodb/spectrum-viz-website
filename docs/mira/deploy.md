@@ -53,7 +53,7 @@ Clone [Mira's React](https://github.com/shahcompbio/mira-react) repository:
 git clone https://github.com/shahcompbio/mira-react.git
 ```
 
-Go into the directory, add an `.npmrc` file with the fontawesome token (provided by Samantha). 
+Go into the directory, add an `.npmrc` file with the fontawesome token (provided by Samantha).
 
 ```
 cd mira-react
@@ -74,25 +74,24 @@ yarn start
 
 This should automatically open `http://localhost:3000` on your browser. If not, then navigate to that URL.
 
-## Deploy: Staging
-
-UPDATE: This is now fairly similar to production. Need to flesh out instructions at a later point in time.
-
-1. Create VM for ES nodes
-2. Pull down docker repo for Mira, pull down docker images for db
-3. Start docker-compose
-
-4. Create VM for ws (install nginx?)
-5. Pull down docker images for app
-6. Start docker-compose
-7. Here is the right nginx config (ask Sam for now)
-
-## Deploy: Production
+## Deploy
 
 ### System Requirements
 
 - [Docker](https://docker.com)
 - [Docker Compose](https://docs.docker.com/compose/)
+
+### Environment
+
+TODO: Flesh out more...
+
+1. Create VM for ES nodes
+2. Pull down docker repo for Mira, pull down docker images for db
+3. Start docker-compose
+4. Create VM for ws (install nginx?)
+5. Pull down docker images for app (make sure to also change host name for graphql)
+6. Start docker-compose
+7. Here is the right nginx config
 
 ### Instructions
 
@@ -108,13 +107,13 @@ Then run Docker Compose:
 docker-compose up -d
 ```
 
-Note that this binds to `localhost` on your local server. For MSK, our main webserver redirects `~/scrna/` to the IP of the server we host Mira on.
+Note that this binds to `localhost` on your local server. You'll need to setup a proxy server to redirect it
 
 ### Deploying new version
 
 The instructions above shows how to deploy a production-level instance of Mira using pre-built images hosted on Docker Hub. There are two images - one for the graphQL layer and one for the React layer
 
-To update an image, first set up as you would for development deployment (this is shown for the graphQL layer - the instructions are similar for the React layer):
+To update an image, first set up as you would for development deployment:
 
 ```
 
@@ -144,6 +143,33 @@ docker push shahcompbio/mira-graphql
 
 ```
 
+For the `react` layer, the instructions are similar but you'll need to ensure that you have the right environment file. For staging, the file name is `.spectrum.staging.env`, and for production it is `.spectrum.prod.env`
+
+```
+REACT_APP_BASENAME=""
+PUBLIC_URL=""
+WIKI_URL=""
+MIRA_URL=""
+SYLPH_URL=""
+HYDRA_URL=""
+```
+
+Then to build:
+
+```
+docker build . -t mira-react:staging --build-arg BUILD_ENV="staging"
+OR
+docker build . -t mira-react --build-arg BUILD_ENV="prod"
+```
+
+Then tag and push to Docker Hub
+
+```
+docker tag mira-react shahcompbio/mira-react
+
+docker push shahcompbio/mira-react
+```
+
 Once that's complete, go to where your production instance, then pull and restart your docker instance.
 
 ```
@@ -155,4 +181,3 @@ docker-compose down
 docker-compose up -d
 
 ```
-

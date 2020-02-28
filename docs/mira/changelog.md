@@ -18,6 +18,7 @@ All notable changes to Mira will be documented here. The unreleased version is c
 - Remove cell type highlighting from CellAssign table
 - Add x,y position to each gene record
 - Patient dashboards merges CD45P and CD45N data
+- Update Spectrum header
 
 ## 0.2.0 (released - Jan 16, 2020)
 
