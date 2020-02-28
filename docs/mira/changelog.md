@@ -5,11 +5,12 @@ sidebar_label: Changelog
 
 All notable changes to Mira will be documented here. The unreleased version is contained in the `staging` branch. The current released version is in `master`.
 
-## 0.3.0 (unreleased)
+## 0.3.0 (released - Feb 28, 2020)
 
 ### Added
 
 - Histograms for label in each UMAP plot
+- Prototype dashboard for cumulative gene expression at `/cumulative-gene
 
 ### Changed
 
