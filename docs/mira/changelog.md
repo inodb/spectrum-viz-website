@@ -10,7 +10,7 @@ All notable changes to Mira will be documented here. The unreleased version is c
 ### Added
 
 - Histograms for label in each UMAP plot
-- Prototype dashboard for cumulative gene expression at `/cumulative-gene
+- Prototype dashboard for cumulative gene expression at `/cumulative-gene`
 
 ### Changed
 
