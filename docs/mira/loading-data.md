@@ -60,7 +60,7 @@ source /path/to/new/virtual/environment/bin/activate
 Install dependencies
 
 ```
-pip install -r mira-requirements.txt
+pip install -r requirements.txt
 ```
 
 Install R packages
